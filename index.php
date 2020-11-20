@@ -1,11 +1,11 @@
 <?php
     require('pdf/fpdf.php');
-    require('db.php');
+    require('conexion.php');
     
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
@@ -38,7 +38,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><?php// echo $result; ?></a>
+            <a class="nav-link" href="#"><?php /* echo $result; */ ?></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://github.com/nicolaspj/formularioinscripcioniset2020/blob/master/formulario-de-inscripcion.jpeg">Descarga</a>
@@ -62,7 +62,8 @@
   </style>
   <h1>INSTITUTO SUPERIOR DE ESTUDIOS TECNICOS</h1>
   <h2>FICHA DE INSCRIPCION</h2>
-  <form action="results.php" method="post">
+  <!-- <form action="results.php" method="post"> -->
+  <form action="results2.php" method="post">
 
       
     <div class="row">
@@ -70,19 +71,18 @@
         <div class="container-fluid">
           <label for="carrera">Seleccionar carrera: </label>
           <select class="form-control" name="carrera">
-            <option>Tecnicatura en Analisis en calidad alimentos</option>
-            <option>Instrumentacion quirurgica</option>
-            <option>Tecnico en programación(CETEC)</option>
-            <option>Tecnico en Analisis de sistemas(CETEC)</option>
-            <option>Enfermeria</option>
-            
+            <option>Tecnicatura en Análisis en calidad alimentos</option>
+            <option>Instrumentación quirúrgica</option>
+            <option>Tecnicatura en programación(CETEC)</option>
+            <option>Tecnicatura en Análisis de sistemas(CETEC)</option>
+            <option>Enfermería</option>         
           </select>
           <br>
-          <label for="nombre">Nombre/s: </label>
+          <label for="nombre">Nombre/s*: </label>
           <input type="text" name="nombre" id="nombre" required>
-          <label for="apellido">Apellido/s: </label>
+          <label for="apellido">Apellido/s*: </label>
           <input type="text" name="apellido" id="apellido" required><br>
-          <label for="dni">DNI: </label>
+          <label for="dni">DNI*: </label>
           <input type="number" name="dni" id="dni" required><br><br>
           <label for="edad">Edad:  </label>
           <input type="number" name="edad" id="edad">años<br><br>
@@ -95,20 +95,20 @@
           <label for="expedidoPor">Expedido por:  </label><br>
           <p><small>Institucion que expide el titulo secundario (Ejemplo: Escuela Tecnica n°5)</small></p>
           <input type="text" name="expedidoPor" id="expedidoPor"><br><br>
-          <label for="direccion">Direccion: </label>
+          <label for="direccion">Direccion*: </label>
           <input type="text" name="direccion" id="direccion" required><br><br>
           <label for="telefonoFijo">Telefono fijo: </label>
           <input type="number" name="telefonoFijo" id="telefonoFijo">
-          <label for="celular">Celular: </label>
+          <label for="celular">Celular*: </label>
           <input type="number" name="celular" id="celular" required><br><br>
-          <label for="correoElectronico">Correo electronico:   </label>
+          <label for="correoElectronico">Correo electronico*:   </label>
           <input type="email" name="correoElectronico" id="correoElectronico"  required><br><br>
           <label for="firma">Firma: </label><br><br><br><br>
-          <center><input type="submit" name="Enviar" ></center>
+          <input type="submit" name="Enviar" >
         </div>
       </div>
     </div>
-
+  </form>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.slim.min.js"></script>
