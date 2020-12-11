@@ -18,6 +18,7 @@
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilos/styles.css">
 
 </head>
 
@@ -51,67 +52,55 @@
     </div>
   </nav>
 
-  <!-- Page Content -->
-  <style>
-    h1, h2{
-      text-align: center;
-    }
-    label{
-      font-weight: bold;
-    }
-  </style>
-  <h1>INSTITUTO SUPERIOR DE ESTUDIOS TECNICOS</h1>
-  <h2>FICHA DE INSCRIPCION</h2>
-  <!-- <form action="results.php" method="post"> -->
-  <form action="results2.php" method="post">
+  <header>
+    <h1>Instituto Superior de Estudios Técnicos</h1>
+    <h2>Ficha de inscripción</h2>
+  </header>
 
-      
-    <div class="row">
-      <div class="col">
-        <div class="container-fluid">
-          <label for="carrera">Seleccionar carrera: </label>
-          <select class="form-control" name="carrera">
-            <option>Tecnicatura en Análisis en calidad alimentos</option>
-            <option>Instrumentación quirúrgica</option>
-            <option>Tecnicatura en programación(CETEC)</option>
-            <option>Tecnicatura en Análisis de sistemas(CETEC)</option>
-            <option>Enfermería</option>         
-          </select>
-          <br>
-          <label for="nombre">Nombre/s*: </label>
-          <input type="text" name="nombre" id="nombre" required>
-          <label for="apellido">Apellido/s*: </label>
-          <input type="text" name="apellido" id="apellido" required><br>
-          <label for="dni">DNI*: </label>
-          <input type="number" name="dni" id="dni" required><br><br>
-          <label for="edad">Edad:  </label>
-          <input type="number" name="edad" id="edad">años<br><br>
-          <label for="nacionalidad">Nacionalidad:  </label>
-          <input type="text" name="nacionalidad" id="nacionalidad"><br><br>
-          <label for="tituloSecundario">Titulo secundario:  </label>
-          <input type="text" name="tituloSecundario" id="tituloSecundario"><br><br>
-          <label for="nroDeRegistro">Nro. de registro de Titulo Secundario: </label>
-          <input type="number" name="nroDeRegistro" id="nroDeRegistro"><br><br>
-          <label for="expedidoPor">Expedido por:  </label><br>
-          <p><small>Institucion que expide el titulo secundario (Ejemplo: Escuela Tecnica n°5)</small></p>
-          <input type="text" name="expedidoPor" id="expedidoPor"><br><br>
-          <label for="direccion">Direccion*: </label>
-          <input type="text" name="direccion" id="direccion" required><br><br>
-          <label for="telefonoFijo">Telefono fijo: </label>
-          <input type="number" name="telefonoFijo" id="telefonoFijo">
-          <label for="celular">Celular*: </label>
-          <input type="number" name="celular" id="celular" required><br><br>
-          <label for="correoElectronico">Correo electronico*:   </label>
-          <input type="email" name="correoElectronico" id="correoElectronico"  required><br><br>
-          <label for="firma">Firma: </label><br><br><br><br>
-          <input type="submit" name="Enviar" >
-        </div>
+  <div class="contenedor">
+    <form action="results2.php" method="post" class="p-4 mb-4">
+      <div class="container-fluid">
+        <label for="carrera">Seleccionar carrera</label>
+        <select class="form-control" name="carrera">
+          <option>Tecnicatura en Análisis en calidad alimentos</option>
+          <option>Instrumentación quirúrgica</option>
+          <option>Tecnicatura en programación(CETEC)</option>
+          <option>Tecnicatura en Análisis de sistemas(CETEC)</option>
+          <option>Enfermería</option>         
+        </select>
+        <label for="nombre">Nombre/s*</label>
+        <input type="text" name="nombre" id="nombre" required>
+        <label for="apellido">Apellido/s*</label>
+        <input type="text" name="apellido" id="apellido" required>
+        <label for="dni">DNI*</label>
+        <input type="number" name="dni" id="dni" required>
+        <label for="edad">Edad</label>
+        <input type="number" min="17" max="99" name="edad" id="edad">
+        <label for="nacionalidad">Nacionalidad</label>
+        <input type="text" name="nacionalidad" id="nacionalidad">
+        <label for="tituloSecundario">Titulo secundario</label>
+        <input type="text" name="tituloSecundario" id="tituloSecundario">
+        <label for="nroDeRegistro">Nro. de registro de Titulo Secundario</label>
+        <input type="number" name="nroDeRegistro" id="nroDeRegistro">
+        <label for="expedidoPor">Expedido por</label>
+        <p><small>Institucion que expide el titulo secundario (Ejemplo: Escuela Tecnica n°5)</small></p>
+        <input type="text" name="expedidoPor" id="expedidoPor">
+        <label for="direccion">Direccion*</label>
+        <input type="text" name="direccion" id="direccion" required>
+        <label for="telefonoFijo">Telefono fijo</label>
+        <input type="number" name="telefonoFijo" id="telefonoFijo">
+        <label for="celular">Celular*</label>
+        <input type="number" name="celular" id="celular" required>
+        <label for="correoElectronico">Correo electronico*</label>
+        <input type="email" name="correoElectronico" id="correoElectronico" required>
+        <!-- <label for="firma">Firma: </label><br><br><br><br> -->
+        <input type="submit" class="btn btn-primary" name="Enviar" >
       </div>
-    </div>
-  </form>
-
+    </form>
+  </div>
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.slim.min.js"></script>
+  <script src="estilos/styles.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
    
 </body>

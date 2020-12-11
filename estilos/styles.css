@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Nunito";
+}
+h1, h2{
+  text-align: center;
+}
+h1 {
+  font-weight: bold;
+}
+label{
+  font-weight: bold;
+}
+.contenedor {
+    margin: 3.125rem auto 0 auto;
+}
+form {
+  background-color:#f1f1f1;
+  border-radius: 0.25rem
+}
+@media (min-width: 768px){
+  .contenedor {
+      max-width: 720px;
+  }
+}
